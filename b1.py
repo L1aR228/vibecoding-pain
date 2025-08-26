@@ -3,7 +3,7 @@ import re
 import shutil
 import pdfplumber
 
-"При запуске программы убедитесь что processed_contracts не содержит файлов, так как при запуске будут создоваться копии"
+"Перед запуском программы убедитесь, что папка processed_contracts пуста, иначе будут созданы копии."
 def extract_text_from_pdf(pdf_path):
     """Извлекает текст из PDF-файла с помощью pdfplumber."""
     text = ""
@@ -254,7 +254,7 @@ def process_contracts(input_folder):
 
     print(f"\nОбработка завершена. Успешно: {processed_count}, с ошибками: {error_count}")
 
-"При запуске программы убедитесь что processed_contracts не содержит файлов, так как при запуске будут создоваться копии"
+"Перед запуском программы убедитесь, что папка processed_contracts пуста, иначе будут созданы копии."
 if __name__ == "__main__":
     input_folder = input("Введите путь к папке с PDF-файлами: ")
     if os.path.exists(input_folder):
